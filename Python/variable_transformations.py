@@ -54,7 +54,6 @@ class Transformations:
             df[col+'_S'] = df[col].diff(4)
             # Completing the additional transformations
             if addTrans == 1:
-                #pass
                 # Logit transformations
                 df[col+'_L'] = np.log(df[col] / (1 - df[col]))
                 df[col+'_X'] = df[col+'_L'].diff()
